@@ -1,0 +1,233 @@
+/* Global styles */
+
+
+
+/* กำหนดภาพพื้นหลังเคลื่อนไหว */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* ให้สูงสุดเต็มหน้าจอ */
+    background: url('poto/bg.gif') no-repeat center center fixed;
+    background-size: cover;
+    animation: moveBackground 30s linear infinite; /* เคลื่อนไหวในเวลา 30 วินาที */
+}
+
+/* Animation สำหรับพื้นหลัง */
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+header {
+    text-align: center;
+    padding: 2rem;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+.title {
+    font-size: 3rem;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+
+/* Header styles */
+header {
+    text-align: center;
+    background: #ffccdd;
+    padding: 20px 10px;
+    color: #ff3366;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+}
+
+/* Navigation styles */
+nav {
+    background: #ff99bb;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.nav-link.active,
+.nav-link:hover {
+    background: #ff6699;
+}
+
+/* Section styles */
+.section {
+    display: none;
+    padding: 20px;
+    text-align: center;
+}
+
+.section.active {
+    display: block;
+}
+
+/* Button styles */
+.surprise-btn {
+    background: #ff3366;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s;
+ 
+}
+
+.surprise-btn:hover {
+    background: #e62955;
+}
+.surprise-message {
+    display: none;
+}
+/* Timeline styles */
+.timeline {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #ffe6eb;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item {
+    margin-bottom: 20px;
+    text-align: left;
+}
+/* .timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+} */
+
+.timeline-date {
+    font-weight: bold;
+    color: #ff3366;
+}
+
+.timeline-title {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+
+.timeline img {
+    width: 80%; /* กำหนดความกว้างของภาพเป็น 80% ของพื้นที่ */
+    height: 350px; /* กำหนดความสูงของภาพ */
+    border-radius: 10px; /* เพิ่มมุมโค้งให้กับภาพ */
+    object-fit: cover; /* ปรับให้ภาพไม่เสียอัตราส่วน แต่ยังคงแสดงเต็มพื้นที่ */
+    margin-bottom: 15px; /* เพิ่มระยะห่างระหว่างภาพกับข้อความ */
+
+    
+}
+
+.timeline-slider {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.timeline-slide {
+    display: none;
+    width: 100%;
+}
+
+.timeline-slide img {
+    width: 80%; /* กำหนดความกว้างของภาพเป็น 80% ของพื้นที่ */
+    height: 350px; /* กำหนดความสูงของภาพ */
+    border-radius: 10px; /* เพิ่มมุมโค้งให้กับภาพ */
+    object-fit: cover; /* ปรับให้ภาพไม่เสียอัตราส่วน แต่ยังคงแสดงเต็มพื้นที่ */
+    margin-bottom: 15px; /* เพิ่มระยะห่างระหว่างภาพกับข้อความ */
+}
+
+button {
+
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+
+}
+
+button.prev {
+    left: 0;
+}
+
+button.next {
+    right: 0;
+}
+
+
+
+
+/* Gallery styles */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.inline-image {
+    display: inline-block;
+    max-width: 50%;
+    height: auto;
+    vertical-align: middle; /* ช่วยให้ภาพอยู่ในแนวเดียวกับข้อความ */
+    border-radius: 10px; /* เพิ่มมุมโค้งหากต้องการ */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* เพิ่มเงา */
+    margin-right: 10px; /* เพิ่มระยะห่างระหว่างภาพกับข้อความ */
+
+     /* กรอบรูป */
+     border: 5px dashed #ff69b4; /* กรอบเส้นประสีชมพู */
+     padding: 10px; /* เพิ่มระยะห่างระหว่างรูปภาพกับกรอบ */
+     background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* พื้นหลังไล่สี */
+     border-radius: 20px; /* มุมโค้ง */
+     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* เงา */
+}
